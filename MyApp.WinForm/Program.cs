@@ -1,8 +1,6 @@
-﻿using Castle.Windsor;
-using MyApp.Core.Windsor;
+﻿using MyApp.Core.Windsor;
 using MyApp.WinForm.Windsor;
 using MyApp.WinForm.Launcher.Presenter;
-using MyApp.WinForm.NumGen.Presenter;
 using System;
 using System.Windows.Forms;
 using MyApp.WinForm.Windsor.Bootstrapper;
