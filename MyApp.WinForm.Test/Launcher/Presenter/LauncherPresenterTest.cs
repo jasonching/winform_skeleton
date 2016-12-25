@@ -1,7 +1,6 @@
 ﻿using Moq;
 using MyApp.WinForm.Launcher.Presenter;
 using MyApp.WinForm.Test.Nunit;
-using MyApp.WinForm.Windsor;
 using NUnit.Framework;
 using System;
 

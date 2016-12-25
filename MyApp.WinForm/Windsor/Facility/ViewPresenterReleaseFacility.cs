@@ -1,12 +1,13 @@
 ﻿using Castle.Core;
 using Castle.MicroKernel.Facilities;
 using Common.Logging;
+using MyApp.WinForm.Core;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 
-namespace MyApp.Core.Windsor.Facility
+namespace MyApp.WinForm.Windsor.Facility
 {
     public class ViewPresenterReleaseFacility : AbstractFacility
     {

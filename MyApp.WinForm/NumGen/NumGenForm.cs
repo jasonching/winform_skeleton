@@ -1,4 +1,4 @@
-﻿using MyApp.Core;
+﻿using MyApp.WinForm.Core;
 using System;
 using System.Windows.Forms;
 

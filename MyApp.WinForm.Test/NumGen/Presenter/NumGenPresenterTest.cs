@@ -3,10 +3,6 @@ using MyApp.WinForm.NumGen.Presenter;
 using MyApp.WinForm.Test.Nunit;
 using NUnit.Framework;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MyApp.WinForm.Test.NumGen.Presenter
 {

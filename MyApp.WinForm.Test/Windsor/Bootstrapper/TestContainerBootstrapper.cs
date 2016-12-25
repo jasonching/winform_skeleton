@@ -1,8 +1,8 @@
 ﻿using Castle.MicroKernel.Registration;
 using Castle.Windsor;
-using MyApp.Core.Windsor;
 using MyApp.WinForm.Launcher;
 using MyApp.WinForm.NumGen;
+using MyApp.WinForm.Windsor;
 
 namespace MyApp.WinForm.Test.Windsor.Bootstrapper
 {

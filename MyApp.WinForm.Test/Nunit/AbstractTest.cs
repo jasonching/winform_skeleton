@@ -1,5 +1,4 @@
 ﻿using Castle.Windsor;
-using MyApp.Core.Windsor;
 using MyApp.WinForm.Test.Windsor;
 using MyApp.WinForm.Test.Windsor.Bootstrapper;
 using MyApp.WinForm.Windsor;
@@ -20,7 +19,7 @@ namespace MyApp.WinForm.Test.Nunit
             WindsorContainer = GlobalContainerAccessor.Instance.Container;
 
             WindsorContainer.Register(
-                   new MainContainerBootstrapper(),
+                   new MainBootstrapper(),
                    new TestContainerBootstrapper { MockObjectsProvider = MockObjectsProvider });
         }
 

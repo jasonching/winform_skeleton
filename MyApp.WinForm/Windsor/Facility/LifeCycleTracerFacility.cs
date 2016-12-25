@@ -1,7 +1,7 @@
 ﻿using Castle.MicroKernel.Facilities;
 using Common.Logging;
 
-namespace MyApp.Core.Windsor.Facility
+namespace MyApp.WinForm.Windsor.Facility
 {
     public class LifeCycleTracerFacility : AbstractFacility
     {

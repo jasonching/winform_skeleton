@@ -1,7 +1,6 @@
 ﻿using MyApp.WinForm.Windsor;
-using MyApp.Core;
 using MyApp.WinForm.NumGen.Presenter;
-using System;
+using MyApp.WinForm.Core;
 
 namespace MyApp.WinForm.Launcher.Presenter
 {

@@ -1,6 +1,6 @@
 ﻿using Common.Logging;
-using MyApp.Core;
-using System;
+using MyApp.Engine.NumGen;
+using MyApp.WinForm.Core;
 
 namespace MyApp.WinForm.NumGen.Presenter
 {
@@ -8,6 +8,7 @@ namespace MyApp.WinForm.NumGen.Presenter
     {
         private static readonly ILog logger = LogManager.GetLogger(typeof(NumGenPresenter));
         public INumGenView Form { get; set; }
+        public NumGenEngine NumGenEngine { get; set; }
 
         public void Show(IView form)
         {
@@ -23,7 +24,7 @@ namespace MyApp.WinForm.NumGen.Presenter
 
         private void ChangeNumberRequest()
         {
-            Form.ChangeNumber(new Random().Next());
+            Form.ChangeNumber(NumGenEngine.GenerateNumber());
         }
     }
 }

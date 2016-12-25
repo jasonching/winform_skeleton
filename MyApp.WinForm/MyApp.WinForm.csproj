@@ -68,9 +68,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Windsor\Bootstrapper\ViewContainerBootstrapper.cs" />
-    <Compile Include="Windsor\Bootstrapper\MainContainerBootstrapper.cs" />
-    <Compile Include="Windsor\Factory\INumGenPresenterFactory.cs" />
+    <Compile Include="Core\IPresenter.cs" />
+    <Compile Include="Core\IView.cs" />
+    <Compile Include="Windsor\Bootstrapper\MainBootstrapper.cs" />
+    <Compile Include="Windsor\Bootstrapper\ViewBootstrapper.cs" />
+    <Compile Include="Windsor\Facility\LifeCycleTracerFacility.cs" />
+    <Compile Include="Windsor\Facility\ViewPresenter.cs" />
+    <Compile Include="Windsor\Facility\ViewPresenterReleaseFacility.cs" />
     <Compile Include="Windsor\GlobalContainerAccessor.cs" />
     <Compile Include="Launcher\ILauncherView.cs" />
     <Compile Include="Launcher\LauncherForm.cs">
@@ -90,6 +94,8 @@
     <Compile Include="NumGen\Presenter\NumGenPresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Windsor\IWindsorContainerBootstrapper.cs" />
+    <Compile Include="Windsor\WindsorContainerExtension.cs" />
     <EmbeddedResource Include="Launcher\LauncherForm.resx">
       <DependentUpon>LauncherForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,9 +129,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MyApp.Core.Lib\MyApp.Core.csproj">
-      <Project>{97b09ed3-f9d4-44e2-8e55-e3774ee559f2}</Project>
-      <Name>MyApp.Core</Name>
+    <ProjectReference Include="..\MyApp.Engine\MyApp.Engine.csproj">
+      <Project>{e254a4c4-b189-4ba2-867c-8c7590eed02f}</Project>
+      <Name>MyApp.Engine</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

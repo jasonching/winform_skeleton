@@ -57,11 +57,6 @@
   <ItemGroup>
     <Compile Include="IPresenter.cs" />
     <Compile Include="IView.cs" />
-    <Compile Include="Windsor\Facility\LifeCycleTracerFacility.cs" />
-    <Compile Include="Windsor\Facility\ViewPresenter.cs" />
-    <Compile Include="Windsor\Facility\ViewPresenterReleaseFacility.cs" />
-    <Compile Include="Windsor\IWindsorContainerBootstrapper.cs" />
-    <Compile Include="Windsor\WindsorContainerExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

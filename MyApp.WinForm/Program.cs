@@ -1,9 +1,8 @@
-﻿using MyApp.Core.Windsor;
-using MyApp.WinForm.Windsor;
-using MyApp.WinForm.Launcher.Presenter;
+﻿using MyApp.WinForm.Launcher.Presenter;
 using System;
 using System.Windows.Forms;
 using MyApp.WinForm.Windsor.Bootstrapper;
+using MyApp.WinForm.Windsor;
 
 namespace MyApp.WinForm
 {
@@ -18,8 +17,8 @@ namespace MyApp.WinForm
             using (var container = GlobalContainerAccessor.Instance.Container)
             {
                 container.Register(
-                    new MainContainerBootstrapper(), 
-                    new ViewContainerBootstrapper());
+                    new MainBootstrapper(), 
+                    new ViewBootstrapper());
 
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);

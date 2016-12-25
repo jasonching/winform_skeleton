@@ -1,6 +1,7 @@
-﻿using System.ComponentModel;
+﻿using MyApp.WinForm.Core;
+using System.ComponentModel;
 
-namespace MyApp.Core.Windsor.Facility
+namespace MyApp.WinForm.Windsor.Facility
 {
     internal class ViewPresenter
     {

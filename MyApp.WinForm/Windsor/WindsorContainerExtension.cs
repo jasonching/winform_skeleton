@@ -1,6 +1,6 @@
 ﻿using Castle.Windsor;
 
-namespace MyApp.Core.Windsor
+namespace MyApp.WinForm.Windsor
 {
     public static class WindsorContainerExtension
     {
