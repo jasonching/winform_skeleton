@@ -28,16 +28,16 @@ public class NumGenPresenter : IPresenter
 ```
 
 ## The Engine
-This is where the core logic goes.  To make sure this class has nothing to do with the presentation layer, I have put it into a seperate project 'MyApp.Engine'.  This is a standard library project that has no presentation logic at all.  Ideally, you don't have to change anything here if you decide to change the whole application to web tomorrow.
+This is where the core logic goes.  To make sure this class has nothing to do with the presentation layer, I have put it into a seperate project MyApp.Engine.  This is a standard library project that has no presentation logic at all.  Ideally, you don't have to change anything here if you decide to change the whole application to web tomorrow.
 
 # IoC
-There are still lots of people not using IoC in C#, and I am sure they are wrong.  What IoC gives you is a single place to handle all the object association and life cycle management in one place.  No more the ugly Singleton Instance object (https://msdn.microsoft.com/en-us/library/ff650316.aspx).
+If you are not using IoC, you are not a good C# developer.  Just like Java developer not using Spring.  What IoC gives you is a single place to handle all the object association and life cycle management.  It keeps your code clean.  And it helps you management objects in a controllable way.  And it brings your interface abstraction into a whole new level.  It makes unit testing a lot easier.  And no more the [ugly Singleton implementation](https://msdn.microsoft.com/en-us/library/ff650316.aspx))!
 
 In this project, there are 2 Bootstrapper files under MyApp.WinForm.Windsor.Bootstrapper.  All the object wiring is done there.  We are keeping the ViewBootstrapper seperate becuase we are going to use a TestContainerBootstrapper to creating mocking views when we are running unit test.
 
-I choose Castle Windsor because it is popular and I don't see anything wrong with it. (https://msdn.microsoft.com/en-us/library/ff650316.aspx)
+I choose [Castle Windsor](http://www.castleproject.org/projects/windsor/) because it is popular and I don't see anything wrong with it.
 
-Ninject (http://www.ninject.org/) is also a good choice, but Castlle Windsor just has more features.
+[Ninject](http://www.ninject.org/) is also a good choice, but Castlle Windsor just has more features.
 
 See how the magic works in LauncherPresenter
 ```   
@@ -53,8 +53,7 @@ Here we are calling Castle to resolve the NumGenPresenter object.  This object w
 
 # Logging
 log4net is used.  I am also using [Common.Logging] (https://github.com/net-commons/common-logging) which is a wrapper on top.
-The log4net configuration is done in log4net.config.  Check here for all the options.
-<https://logging.apache.org/log4net/release/manual/configuration.html>
+The log4net configuration is done in log4net.config.  Check [here](https://logging.apache.org/log4net/release/manual/configuration.html) for all the options.
 
 log4net reference is not required in MyApp.Engine project.  Becuase of the abstraction Common.Logging has provided.
 
@@ -81,7 +80,7 @@ When you are doing test, you should keep the practice to put your test case in 3
 
 The magic of testing WinForm is mocking.
 
-We are using (Moq)<https://github.com/Moq/moq4/wiki/Quickstart> here.  It's powerful and beautiful.  No other mocking framework can compare to it in C# world.
+We are using [Moq](https://github.com/Moq/moq4/wiki/Quickstart) here.  It's powerful and beautiful.  No other mocking framework can compare to it in C# world.
 
 When mocking and the proper MVP pattern in place, you can verify your presenter and engine are working by stimulating how the view react via the mocking object.
 
